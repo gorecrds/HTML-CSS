@@ -3,20 +3,34 @@ html {
 }
 
 body {
-    background-color: #141313;
-    color: rgb(255, 255, 255);
+    background-color: #fefae0;
+    color: #283618;
 }
 
+nav,ul{
+    background-color: #283618;
+}
+
+h1 {
+    color: #fefae0;
+    background-color:#283618;
+}
+
+h2{
+    color:#fefae0
+}
+
+
 a {
-    color: rgb(10, 130, 235);
+    color: #f77f00;
 }
 
 a:visited {
-    color: rgb(59, 195, 236);
+    color:#f5ac00;;
 }
 
 a:hover,a:active {
-    color: rgb(7, 88, 154);
+    color: #f58f00;
 }
 
 table, tr, th, td, caption {
@@ -25,3 +39,7 @@ table, tr, th, td, caption {
     border-collapse: collapse;
     padding: 0.5rem;
 }
+
+.margin-bottom-1rem {
+        margin-bottom: 1rem;
+    }

@@ -22,10 +22,10 @@
             <h2>About Me</h2>
             <ul>
                 <li>
-                    <a href="#class-reason">Why I'm Taking This Course</a>
+                    <a href="#registration">News Letter</a>
                 </li>
                 <li>
-                    <a href="#chatgpt">What I think about using ChatGPT for Research</a>
+                    <a href="#Get-Post-Explanation">Get/Post Discussion</a>
                 </li>
             </ul>
         </nav>
@@ -33,54 +33,117 @@
     <hr>
 
     <main>
-        <article id="class-reason">
+        <article id="my-picture">
+            <h2>Igor Cardoso</h2>
             <figure>
                 <img src="../img/Igor_Cardoso.jpg" alt="basic trading info" title="trading info" width="350"
                     height="350">
-                <figcaption>Igor Cardoso</figcaption>
+                <figcaption>Software Engineer and Financial Advisor</figcaption>
             </figure>
-
-            <h2>Why I'm Taking This Course</h2>
-            <p>
-                I'm keen on refreshing my knowledge of HTML5 and CSS. I have been working in technology for several
-                years
-                now. One of my biggest academic achievement, was a Masters in Software Engineering back in 2016. Lately
-                I
-                have been exploring the realm of AI. I do think it will be the next big thing; if isn't already.
-                I'm hoping this class will provide more depth and structure than what I could achieve by self-studying
-                or
-                watching tutorials in platforms such as LinkedIn Learning, MasterClass, and YouTube. There was a time
-                when
-                I was deeply involved in website development, but I shifted gears to back-end work and have since felt
-                somewhat
-                disconnected from the latest in front-end development. The landscape has certainly evolved, with many
-                now
-                favoring frameworks for their speed and efficiency in development. Despite this, I believe it's crucial
-                to
-                get back to the basics and solidify those foundational skills.
-            </p>
         </article>
-
         <hr>
+        <article class="margin-bottom-1rem" id="registration">
+            <h2>Weekly Stock Market Digest Newsletter</h2>
+            <p>Registration</p>
 
-        <article id="chatgpt">
-            <h2>What I think about using ChatGPT for Research</h2>
-            <p>
-                I belive ChatGPT is a ground breaking technology as welll as a double-edged sword. It's super handy,
-                efficient towards offering quick answers and help when you need it. But, there's that tricky part where
-                it's easy to get a bit too comfy with it, right? We might lean on it
-                more than we should and miss out on digging deeper into stuff ourselves. In way, I believe it can
-                diminish one's ability to skills such as critical thinking and problem-solving skills could diminish
+            <form action="https://httpbin.org/get" method="get">
+                <fieldset>
+                    <legend>Personal Info</legend>
+                    <p>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" required id="firstName" placeholder="Warren"
+                            autocomplete="on">
+                    </p>
+                    <p>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" required id="lastName" placeholder="Buffett"
+                            autocomplete="on">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required id="email" placeholder="Email">
+                    </p>
+                    <p>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" required id="phone" placeholder="5555555555"
+                            pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                    </p>
+                    <label for="generation">Select Your Generation:</label>
+                    <select class="margin-bottom-1rem" name="generation" id="generation">
+                        <option value="">Choose...</option>
+                        <option value="Silent Generation">Silent Generation</option>
+                        <option value="Baby Boomer">Baby Boomer</option>
+                        <option value="Generation X">Generation X</option>
+                        <option value="Millennial">Millennial</option>
+                        <option value="Generation Z">Generation Z</option>
+                        <option value="Generation Alpha">Generation Alpha</option>
+                    </select>
 
-                Looking ahead, I envision a future where AI, particularly chatbots, integrates with virtual reality to
-                create immersive work place and educational environments. Imagine a virtual classroom where students
-                gather to learn, where a chatbot serve as a tutor or facilitator, offering personalized assistance,
-                answering questions, and guiding discussions 24/7. The unfortunate side of
-                things is that I believe AI will significantly transform the job market, displacing many roles that
-                currently rely on routine or predictable tasks.
-            </p>
+                    <fieldset>
+                        <legend>Annual Income:</legend>
+                        <p><input type="radio" name="income" id="income1" value="0-50k" required> <label for="income1">0
+                                -
+                                $50,000</label></p>
+                        <p><input type="radio" name="income" id="income2" value="50k-100k" required> <label
+                                for="income2">$50,000
+                                - $100,000</label>
+                        </p>
+                        <p><input type="radio" name="income" id="income3" value="100k+" required> <label
+                                for="income3">Above
+                                $100,000</label></p>
+                    </fieldset>
+                    <!-- Consent for receiving emails -->
+                    <p>
+                        <input type="checkbox" name="consent" id="consent" required>
+                        <label for="consent">I agree to receive emails 😎</label>
+                    </p>
+
+                </fieldset>
+                <button type="submit">Submit</button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                <button type="reset">Reset</button>
+            </form>
         </article>
-
+        <hr>
+        <article id="Get-Post-Explanation">
+            <h2><code>Requests Discussion: GET VS POST</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Section</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Understanding HTTP Requests with HTTPbin</td>
+                        <td>HTTPbin acts as a mirror reflecting back HTTP requests, illustrating the differences between
+                            GET and
+                            POST methods, enabling developers to understand the request-response flow.</td>
+                    </tr>
+                    <tr>
+                        <td>GET Method</td>
+                        <td>GET requests are like shouting across a room; the data is visible in the URL. Ideal for
+                            non-sensitive
+                            data queries. HTTPbin reveals the data appended to the URL.</td>
+                    </tr>
+                    <tr>
+                        <td>POST Method</td>
+                        <td>POST requests are akin to passing secret notes; the data resides in the request body,
+                            concealed from
+                            URLs. Ideal for sensitive or large data transmissions. HTTPbin exposes the data within the
+                            body.</td>
+                    </tr>
+                    <tr>
+                        <td>Decoding HTTPbin's Responses</td>
+                        <td>HTTPbin details the response elements for both GET and POST, including the URL destination,
+                            any
+                            associated headers, and the specifics of transmitted data (Args for GET/Form for POST).</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+        </article>
     </main>
     <hr>
     <footer>
