@@ -1,0 +1,166 @@
+/* Base styles: least specific, affect the broadest range of elements */
+html {
+    font-size: 1.5rem;
+    /* Base font size */
+    font-family: 'Times New Roman', serif;
+    /* Default font */
+}
+
+body {
+    background-color: #FEFAE0;
+    /* Page background */
+    color: #283618;
+    /* Default text color */
+}
+
+/* Universal text and table styles */
+p,
+td {
+    text-align: justify;
+    /* Justify text */
+    font-size: 0.8rem;
+    /* Text size */
+}
+
+figcaption,
+figure {
+    text-align: center;
+    /* Center text */
+    font-weight: 400;
+    /* Normal weight */
+}
+
+/* Link styles: more specific than element selectors above */
+a {
+    color: #BC6C25;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+a:visited {
+    color: #bc9925;
+    /* Visited link color */
+}
+
+a:hover,
+a:active {
+    color: #bc8725;
+    /* Hover/Active color */
+    text-decoration: underline;
+    /* Underline on hover/active */
+}
+
+/* Header styles: specific to header elements, override text styles */
+h1,
+h2 {
+    color: #fefae0;
+    /* Header text color */
+    background-color: #283618;
+    /* Header background */
+    margin: 0;
+    /* Remove default margin */
+    padding: 4px;
+    /* Add padding */
+}
+
+h3 {
+    background-color: #606C38;
+    /* h3 background */
+    color: #DDA15E;
+    /* h3 text color */
+}
+
+/* Table formatting: more specific than the general text styles */
+table,
+tr,
+th,
+td,
+caption {
+    border: 1px solid #eee;
+    /* Border color */
+    border-collapse: collapse;
+    /* Collapse borders */
+    padding: 0.5rem;
+    /* Padding inside cells */
+    border-radius: 3px;
+    /* Rounded corners */
+}
+
+th {
+    text-align: center;
+    /* Center text */
+    font-weight: bolder;
+    /* Bold text */
+    background-color: #606C38;
+    /* Background color */
+    color: #FEFAE0;
+    /* Text color */
+}
+
+/* Form legend: specific styling for form legends */
+legend {
+    color: #BC6C25;
+    /* Legend color */
+}
+
+/* Navigation and list: more specific due to targeting two elements */
+nav,
+ul {
+    background-color: #283618;
+    /* Background color */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+}
+
+/* Fieldset styling: a specific element, potentially overriding previous general styles */
+fieldset {
+    border-radius: 1%;
+    /* Rounded border */
+}
+
+/* Footer styling: increased specificity with element and child selector */
+footer {
+    text-align: center;
+    /* Center text */
+    width: 100%;
+    /* Full width */
+    padding: 20px;
+    /* Padding */
+}
+
+body footer p {
+    text-align: center;
+    /* Center text */
+    color: #BC6C25;
+    /* 
+    Text color
+   
+   
+    Specificity: 0,0,3: This specificity value means that the rule is more specific than any single tag selector but less specific than a class selector. I could have instead 
+    used a class selector, but that would require me to add the class selector to each element instead. Instead, I decided to target with precision the styling needed in the footer.
+    
+    */
+}
+
+/* Utility classes: intended for direct application, thus high specificity */
+.margin-bottom-1rem {
+    margin-bottom: 1rem;
+    /* Bottom margin */
+}
+
+.text-center {
+    text-align: center;
+    /* Center text */
+}
+
+.size {
+    width: 300px;
+    /* Width */
+    height: 100px;
+    /* Height */
+    border: 1px solid #283618;
+    /* Border color */
+}
