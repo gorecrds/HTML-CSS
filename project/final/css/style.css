@@ -1,0 +1,392 @@
+/* Basic Reset */
+/* Reset the margin and padding to zero  to ensure consistency across browsers. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling setting default text colors and background*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: #001f54ff;
+    background-color: #fefcfbff;
+}
+
+/* Normalizing font-weight across all heading levels */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+/* H1 styling for page */
+ h1 {
+    font: bold 3em Arial, Helvetica, sans-serif;
+    text-align: center;
+    position:sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #001f54ff;
+    z-index: 10;
+}
+
+/* background logo to the main heading */
+h1::before {
+    content: "Home";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1em;
+    background-image: url('../../img/house-logo.png');
+    background-size:contain;
+    background-repeat: repeat-x;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* hides h2 elements within a <body> element that has the id of "top" */
+body header h2 {
+    display: none;
+}
+
+/* Hide Display Class */
+.hide {
+    display:none;
+}
+
+/* Configuring the appearance of all anchor tags (links)*/
+a {
+    color: #1282a2ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:#fefcfbff;
+}
+
+
+
+/* Header and Navigation Styles */
+/* appearance and layout of the page header*/
+header {
+    background-color: #0a1128ff;
+    max-width: 100%;
+    text-align: center;
+    color: #fefcfbff;
+} 
+
+/* Flexbox-based Navigation Styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 1em;
+    flex-grow: 1;
+    text-align: center;
+    min-width: 120px;
+    padding: 5px 10px;
+}
+
+
+/* Class to strech images to 100% of the window width*/
+.image-stretch {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Styles the figure element within article for layout and alignment */
+article figure {
+    margin: 0 auto;
+    width: 100%;
+    text-align:center;
+}
+
+/* Styles the figure element within article for layout and alignment */
+section figure {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+/* tyles for images to ensure they scale to the full width of their parent containerimg {*/
+ img   {
+    max-width: 40rem;
+    height: auto;
+    width: 100%;
+}
+
+/* #centering text for figcaption*/
+figcaption {
+    text-align: center;
+}
+
+/* Main Content */
+main {
+    padding: 0px;
+}
+
+main h2 {
+    text-align: center;
+    background-color: #f3f4f6;
+    display: block;
+    border-radius: 1em;
+
+}
+
+/* General style for sections */
+ section {
+    margin: 2em;
+    padding: 2em;
+    background-color: #fff;
+    color: #001f54ff;
+    border: 1px solid #034078ff;
+    border-radius: 8px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #0a1128ff;
+    color: #fefcfbff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #fefcfbff;
+}
+
+
+/* Styling table for sitemap*/
+
+table {
+    margin-top: 1em;
+    width: auto;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th,
+td {
+    text-align: center;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+
+
+/* Setting a different background color */
+.GrayBg {
+    background-color: #f3f4f6;
+}
+
+/* 
+Configuring the container to display flex items in a row  allowing them to wrap as needed. 
+Aloow sthe Display to respond and adaapt to different screen sizer for better reading by stacking items as needed. */
+
+.box-container { 
+    display: flex; /* sets the class to be a flex container*/
+    flex-wrap: wrap; /* This property allows the flex items (children of .box-container) to wrap onto multiple   */
+    justify-content: space-around; /* Aligns the flex items inside the container and distributes extra space around */
+}
+
+/* 
+Styles each box to flexibly grow or shrink with a base width and other 
+styles to the box to make it more aesthetics 
+*/
+.box {
+    flex: 1 1 250px; /* Grow and shrink equally, start at 250px width */
+    margin: 10px;  /* Separate elements from other elements by 10px */
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3); /* add shadow to the boxes */
+    padding: 20px; /* box does not touch the edges */
+    border-radius: 8px; /* make the box elements rounder */
+    min-height: 100px; /* height's minimum size not to go below 100px */
+}
+
+/* Coloring H3 to blue */
+.box h3 {
+    color: #034078ff;
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid #034078ff;
+}
+
+.box ul {
+    list-style-type: none;
+    padding-left: 2rem;
+    text-align: justify;
+}
+
+/* style for paragraph and h3*/
+
+p,h3 {
+    margin-top: 1em;
+}
+
+h3{
+    border-bottom: #001f54ff solid 1px;
+}
+.hamburger, .hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: .8em;
+    }
+
+    nav {
+        position:static;
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        }
+    body nav {
+        text-align: right;
+    }
+    .hamburger {
+        display: block;
+        font-size: 3em;
+        text-align: right;
+    }
+
+    #nav-toggle:checked+.hamburger+nav {
+        display: block;
+    }
+
+    section{
+        margin: 0.5em;
+        padding: 1em;
+    }            
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+            font-size: 1em;
+        }
+        
+        nav ul {
+            flex-direction:row;
+            justify-content:space-evenly;
+            border-bottom: 2px solid #034078ff;
+            border-style: ridge;
+            background-color: #f3f4f6;
+
+        }
+    
+        nav ul li {
+            max-width: 4em;
+            height: 2em;
+            margin: 0;
+            border-bottom: 1px solid #034078ff;
+            background-color: #f3f4f6;
+            font-weight: bold;
+            
+        }
+    
+        .box-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        .box {
+            flex-basis: 48%;
+            margin: 10px;
+        }
+
+        section {
+            margin: 0.8em;
+            padding: 1.3em;
+        }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    body {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav ul li {
+        max-width: 4em;
+        height: 2em;
+        margin: 0;
+        border-bottom: 1px solid #034078ff;
+        font-weight: bold;
+
+    }
+
+    .box-container {
+        justify-content: space-around;
+    }
+
+    .box {
+        flex-basis: 32%;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+    body {
+        font-size: 1.4em;
+    }
+
+    nav ul {
+        justify-content:space-evenly;
+    }
+
+    nav ul li {
+
+        margin: 0;
+
+    }
+    .box {
+        flex-basis: 24%;
+    }    
+}
+
+@media only screen and (min-width: 1201px) {
+
+    body {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        text-decoration: underline;
+        color: #034078ff;
+    }
+
+    .box {
+        flex-basis: 19%;
+    }
+}
