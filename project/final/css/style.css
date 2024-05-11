@@ -243,6 +243,61 @@ h3{
     display: none;
 }
 
+.contact-form {
+    flex-direction: column;
+    max-width: auto;
+}
+
+.contact-form fieldset {
+    padding: 1em;
+    border-radius:.5em;
+}
+
+.contact-form input,
+textarea {
+    padding: .5em;
+    font-size: medium;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    min-height: 10em;
+}
+
+.contact-form button {
+    margin-top: 1em;
+    height: 4em;
+    min-width: 6em;
+    width: 10em;
+    font-weight: bold;
+}
+
+.justified-text {
+    text-align: justify;
+}
+
+.bg-cover {
+    background-image: url(../../img/cover-2.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+.bg-cover section {
+
+    background-color: rgba(255, 255, 255, 0.87);
+    border-radius: .5em;
+}
+
+.bg-cover form, .bg-cover article {
+    background-color: rgba(255, 255, 255) ;
+    border-radius: .5em;
+    padding: 1em;
+    margin: 1em;
+}
+
+
+
 @media only screen and (max-width: 480px) {
     body {
         font-size: .8em;
@@ -278,37 +333,6 @@ h3{
         margin: 0.5em;
         padding: 1em;
     }            
-}
-
-.contact-form {
-    flex-direction: column;
-    max-width: auto;
-}
-
-.contact-form fieldset {
-    padding: 1em;
-}
-
-.contact-form input, textarea {
-    padding: .5em;
-    font-size: medium;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.contact-form textarea{
-    min-height: 10em;
-}
-.contact-form button {
-    margin-top: 1em;;
-    height:4em;
-    min-width: 6em;
-    width: 10em;
-    font-weight: bold;
-}
-
-.justified-text{
-    text-align: justify;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
