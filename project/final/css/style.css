@@ -98,6 +98,7 @@ nav ul li {
     width: 100%;
     height: auto;
     max-width: 100%;
+    aspect-ratio: 3/1;
 }
 
 /* Styles the figure element within article for layout and alignment */
@@ -279,6 +280,36 @@ h3{
     }            
 }
 
+.contact-form {
+    flex-direction: column;
+    max-width: auto;
+}
+
+.contact-form fieldset {
+    padding: 1em;
+}
+
+.contact-form input, textarea {
+    padding: .5em;
+    font-size: medium;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form textarea{
+    min-height: 10em;
+}
+.contact-form button {
+    margin-top: 1em;;
+    height:4em;
+    min-width: 6em;
+    width: 10em;
+    font-weight: bold;
+}
+
+.justified-text{
+    text-align: justify;
+}
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     body {
